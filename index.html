@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Curso Estrategia Empresarial - Chacomer S.A.E.</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #1e3c72; color: white; }
+        .slide { padding: 20px; display: none; }
+        .slide.active { display: block; }
+        .slide-title { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+        @media (max-width: 768px) {
+            .slide-title { font-size: 1.4rem; }
+            .slide { padding: 15px; }
+        }
+        .navigation { 
+            position: fixed; 
+            bottom: calc(10px + env(safe-area-inset-bottom)); 
+            width: 100%; 
+            text-align: center; 
+        }
+        button { padding: 10px 20px; border: none; background: rgba(255,255,255,0.3); color: white; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="slide active">
+        <h1 class="slide-title">Bienvenido al Curso de Estrategia Empresarial</h1>
+        <p>Versión totalmente responsive para visualización en teléfonos y tablets.</p>
+    </div>
+    <div class="navigation">
+        <button onclick="alert('Anterior')">Anterior</button>
+        <button onclick="alert('Siguiente')">Siguiente</button>
+    </div>
+</body>
+</html>
