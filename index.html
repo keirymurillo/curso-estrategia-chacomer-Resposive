@@ -99,6 +99,96 @@
     .fail{border-left:4px solid #e74c3c}
     .explain{font-size:.95rem;color:var(--muted);margin-top:6px}
 
+    /* Mini-quiz */
+    .quiz.mini{
+      max-width:600px;
+      margin:0 auto 20px;
+      padding:16px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.1);
+      backdrop-filter:blur(8px);
+    }
+    .quiz.mini .quiz-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .quiz.mini .quiz-head .badge{
+      font-size:1rem;
+      padding:4px 8px;
+      border-radius:8px;
+      background:rgba(255,255,255,.2);
+      border:1px solid rgba(255,255,255,.3);
+    }
+    .quiz.mini .quiz-head .badge[data-role="status"]{
+      font-size:0.9rem;
+      padding:2px 6px;
+      border-radius:6px;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .quiz.mini .q-card{
+      padding:12px;
+      margin-bottom:10px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:10px;
+      background:rgba(255,255,255,.05);
+    }
+    .quiz.mini .q-card[data-role="body"]{
+      padding:0;
+      margin-bottom:10px;
+    }
+    .quiz.mini .q-card[data-role="body"] .q-title{
+      font-size:1.1rem;
+      margin-bottom:8px;
+    }
+    .quiz.mini .q-card[data-role="body"] .choices{
+      gap:6px;
+    }
+    .quiz.mini .q-card[data-role="body"] .choice{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+    }
+    .quiz.mini .q-card[data-role="body"] .explain{
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:8px;
+    }
+    .quiz.mini .q-actions{
+      display:flex;
+      justify-content:space-around;
+      gap:8px;
+      margin-top:10px;
+    }
+    .quiz.mini .q-actions .pill{
+      padding:6px 12px;
+      border-radius:8px;
+      font-size:0.9rem;
+    }
+    .quiz.mini .result{
+      padding:10px;
+      border-radius:10px;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.2);
+      margin-top:10px;
+    }
+    .quiz.mini .result .q-title{
+      font-size:1rem;
+      margin-bottom:6px;
+    }
+    .quiz.mini .result p{
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .quiz.mini .result strong{
+      color:var(--accent);
+      font-weight:700;
+    }
+
     /* Print certificate minimal */
     @media print{
       .topbar,.navigation,.dots{display:none!important}
@@ -225,6 +315,7 @@
             <p><strong>Ejemplo:</strong> cuando definimos un nuevo KPI comercial, verificamos si el indicador promueve calidad real para el cliente y prácticas alineadas a nuestros valores.</p>
             <div class="callout">Tip: conecta tu objetivo personal trimestral con al menos un indicador de misión/visión.</div>
           </div>
+          <div class="quiz mini" data-module="1"></div>
         </div>
       </section>
 
@@ -236,6 +327,7 @@
           <div id="m2-por" class="expander-content"><ul><li>Decisiones sabias y consistentes.</li><li>Resultados sostenibles.</li><li>Ambiente predecible y de confianza.</li></ul></div>
           <button class="expander" aria-expanded="false" aria-controls="m2-prac">¿Cómo se practican?</button>
           <div id="m2-prac" class="expander-content"><ul><li>Veracidad en reportes y comunicación.</li><li>Justicia en procesos y reconocimientos.</li><li>Servicio y diligencia en tareas diarias.</li></ul></div>
+          <div class="quiz mini" data-module="2"></div>
         </div>
       </section>
 
@@ -253,6 +345,7 @@
             <ul><li>A) Prometer el plazo ideal para asegurar la venta.</li><li>B) Informar la fecha más realista y ofrecer alternativas.</li><li>C) Evitar responder hasta tener certeza.</li></ul>
             <div class="callout">Respuesta recomendada: <strong>B</strong>, equilibra integridad (verdad) y efectividad (solución).</div>
           </div>
+          <div class="quiz mini" data-module="3"></div>
         </div>
       </section>
 
@@ -264,6 +357,7 @@
           <div id="m4-leal" class="expander-content"><ul><li>Sentido de pertenencia.</li><li>Resguardo de información sensible.</li><li>Respeto por personas y normas.</li></ul></div>
           <button class="expander" aria-expanded="false" aria-controls="m4-inn">Innovación responsable</button>
           <div id="m4-inn" class="expander-content"><ul><li>Creatividad con foco en el cliente.</li><li>Flexibilidad y aprendizaje continuo.</li><li>Salir de la zona de confort con métricas claras.</li></ul></div>
+          <div class="quiz mini" data-module="4"></div>
         </div>
       </section>
 
@@ -275,6 +369,7 @@
           <div id="m5-social" class="expander-content"><ul><li>Desarrollo personal y comunitario.</li><li>Espíritu de servicio y empatía.</li><li>Cumplimiento de leyes y normas.</li></ul></div>
           <button class="expander" aria-expanded="false" aria-controls="m5-ambiental">Cuidado ambiental</button>
           <div id="m5-ambiental" class="expander-content"><ul><li>Gestión de residuos.</li><li>Prevención de contaminación.</li><li>Espacios saludables y seguros.</li></ul></div>
+          <div class="quiz mini" data-module="5"></div>
         </div>
       </section>
 
@@ -333,6 +428,13 @@
             <div class="timeline-item"><div class="timeline-number">2</div><div><div class="timeline-title">Conversación</div><p>Compartí un aprendizaje con tu líder y tu equipo.</p></div></div>
             <div class="timeline-item"><div class="timeline-number">3</div><div><div class="timeline-title">Seguimiento</div><p>Medí el impacto (KPI) y traé evidencias a la próxima reunión.</p></div></div>
           </div>
+          <div class="module-card" id="certCard">
+            <h3 class="module-title">Diploma de finalización</h3>
+            <p>Ingresá tu nombre como querés que aparezca en el diploma.</p>
+            <input id="certName" type="text" placeholder="Tu nombre y apellido" style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.25);color:#fff;padding:10px;margin:6px 0" />
+            <div class="q-actions"><button class="pill" id="btnDownloadCert" disabled>Descargar diploma</button></div>
+            <p class="muted" id="certStatus">Para habilitar el diploma, aprobá todas las mini-evaluaciones y la evaluación final.</p>
+          </div>
           <div class="module-card"><h3 class="module-title">¿Querés volver al inicio?</h3><button class="nav-btn" id="homeBtn">↺ Volver al inicio</button></div>
         </div>
       </section>
@@ -367,7 +469,14 @@
       const dots = slides.map((_, i) => {
         const d = document.createElement('button');
         d.className = 'dot'; d.setAttribute('role','tab'); d.setAttribute('aria-label', 'Diapositiva ' + (i+1));
-        d.addEventListener('click', () => showSlide(i)); dotsWrap.appendChild(d); return d;
+        d.addEventListener('click', () => {
+          if(i <= currentSlide){ showSlide(i); return; }
+          if(typeof window.chacoCanAdvanceFromSlide === 'function'){
+            const can = window.chacoCanAdvanceFromSlide(slides[currentSlide]);
+            if(!can) return;
+          }
+          showSlide(i);
+        }); dotsWrap.appendChild(d); return d;
       });
 
       function updateProgress(){ progressBar.style.width = (((currentSlide+1)/totalSlides)*100) + '%'; }
@@ -386,7 +495,13 @@
         localStorage.setItem('chaco.slide', String(currentSlide));
       }
 
-      function changeSlide(delta){ showSlide(currentSlide + delta); }
+      function changeSlide(delta){
+        if(delta > 0 && typeof window.chacoCanAdvanceFromSlide === 'function'){
+          const can = window.chacoCanAdvanceFromSlide(slides[currentSlide]);
+          if(!can) return;
+        }
+        showSlide(currentSlide + delta);
+      }
 
       prevBtn.addEventListener('click', ()=>changeSlide(-1));
       nextBtn.addEventListener('click', ()=>changeSlide(1));
@@ -466,6 +581,13 @@
       const btnSave = document.getElementById('btnSave');
       const btnLoad = document.getElementById('btnLoad');
 
+      const META_KEY = 'chaco.quiz.meta';
+      function loadMeta(){ try{ return JSON.parse(localStorage.getItem(META_KEY)||'{}')||{}; }catch{ return {}; } }
+      function updateGlobalMeta(){ window.__chacoFinalQuizMeta = { attempts: (meta.attempts||0), passed: !!meta.passed }; }
+      function saveMeta(m){ localStorage.setItem(META_KEY, JSON.stringify(m||{})); updateGlobalMeta(); try{ window.dispatchEvent(new CustomEvent('chaco:status-change')); }catch{} }
+      let meta = loadMeta();
+      updateGlobalMeta();
+
       let questions = [], idx = 0, score = 0, answered = false;
 
       function render(){
@@ -502,15 +624,20 @@
         render();
       }
 
-      function finish(){
+      function finish(fromLoad=false){
         elBody.innerHTML = '<div class="q-title">¡Evaluación finalizada!</div><p>Tu puntaje total es <strong>'+score+'/100</strong>.</p>';
         elProg.textContent = questions.length + '/' + questions.length;
         elScore.textContent = score + ' pts';
         elResult.style.display='block';
         const ok = score >= 85;
+        if(!fromLoad){
+          meta.attempts = (meta.attempts||0) + 1;
+          if(ok) meta.passed = true;
+          saveMeta(meta);
+        }
         elResult.className = 'result ' + (ok? 'success':'fail');
         elResult.innerHTML = ok ? '<strong>¡Aprobado!</strong> Superaste el mínimo de 85. Podés imprimir o guardar tu evidencia.' : '<strong>No alcanzaste 85.</strong> Podés reintentar para mejorar tu puntaje.';
-        btnRetry.style.display='inline-block';
+        btnRetry.style.display = (!ok && (meta.attempts||0) < 2 && !meta.passed) ? 'inline-block' : 'none';
         btnNext.disabled = true;
         saveState();
       }
@@ -534,12 +661,16 @@
           const data = JSON.parse(raw);
           if(!data || !Array.isArray(data.questions)) return false;
           questions = data.questions; idx = data.idx; score = data.score;
-          if(data.done){ finish(); } else { renderQuestion(); }
+          if(data.done){ finish(true); } else { renderQuestion(); }
           return true;
         }catch{ return false; }
       }
 
-      btnStart.addEventListener('click', start);
+      btnStart.addEventListener('click', ()=>{
+        if(meta.passed){ elResult.style.display='block'; elResult.className='result success'; elResult.innerHTML='<strong>Ya aprobado.</strong> Podés continuar.'; return; }
+        if((meta.attempts||0) >= 2){ elResult.style.display='block'; elResult.className='result fail'; elResult.innerHTML='<strong>Sin intentos disponibles.</strong> Podés continuar al siguiente módulo.'; return; }
+        start();
+      });
       btnNext.addEventListener('click', next);
       btnRetry.addEventListener('click', retry);
       btnSave.addEventListener('click', saveState);
@@ -549,8 +680,210 @@
       loadState();
     })();
 
-    // ======= Ensayo: guardado e impresión =======
+    // ======= Mini-evaluaciones por módulo (2 intentos, gating) =======
     (function(){
+      const miniBank = [
+        {m:1,q:'La misión y la visión sirven principalmente para…',choices:['Definir metas personales aisladas','Orientar decisiones y prioridades organizacionales','Sustituir políticas y procesos'],a:1,exp:'Misión/visión orientan qué priorizar, cómo medir y decidir.'},
+        {m:1,q:'Un KPI alineado a la visión debe…',choices:['Prometer resultados ideales aunque no sean realistas','Incentivar excelencia sostenible y medible','Enfocarse solo en costos'],a:1,exp:'La visión pide excelencia sostenible, con métricas claras.'},
+        {m:2,q:'Practicar principios bíblicos en la empresa implica…',choices:['Reservarse la verdad si conviene','Aplicar veracidad, justicia y servicio','Evitar dar feedback'],a:1,exp:'Veracidad + justicia + servicio traducen los principios a conducta.'},
+        {m:2,q:'¿Qué genera un ambiente de trabajo predecible?',choices:['Aplicar reglas universales coherentes','Imponer cambios sin comunicar','Priorizar el atajo'],a:0,exp:'Las reglas universales aplicadas consistentes generan previsibilidad.'},
+        {m:3,q:'Integridad significa…',choices:['Coherencia entre pensar, decir y hacer','Cumplir metas a cualquier costo','Evitar reportar errores'],a:0,exp:'Coherencia total; reportar errores es parte de esa coherencia.'},
+        {m:3,q:'Efectividad se demuestra cuando…',choices:['Planifico y priorizo para el resultado global','Hago muchas tareas a la vez sin foco','Trabajo más horas siempre'],a:0,exp:'Planificación y priorización orientadas a resultados globales.'},
+        {m:4,q:'La lealtad se ve en…',choices:['Compartir info sensible si ayuda a vender','Cuidar información y respetar normas','No cuestionar procesos jamás'],a:1,exp:'Lealtad implica resguardo de info y respeto a personas/normas.'},
+        {m:4,q:'Innovar responsablemente es…',choices:['Probar ideas sin medir impacto','Escuchar al cliente y medir mejoras','Evitar riesgos siempre'],a:1,exp:'Innovación = creatividad + escucha + métricas de mejora.'},
+        {m:5,q:'Responsabilidad social implica…',choices:['Solo cumplir la ley','Buscar impacto positivo en personas y comunidad','Delegar todo al Estado'],a:1,exp:'Se busca impacto real en personas/comunidad, además de la ley.'},
+        {m:5,q:'Cuidado ambiental efectivo es…',choices:['Tirar residuos con rapidez','Clasificar y tratar residuos adecuadamente','Limpiar solo si hay inspección'],a:1,exp:'Gestión responsable de residuos y prevención de contaminación.'},
+        {m:3,q:'Caso: ante un plazo incierto para un cliente, lo correcto es…',choices:['Prometer el mejor plazo posible','Ser transparente y ofrecer alternativas','Evitar responder hasta último momento'],a:1,exp:'Transparencia + alternativas = integridad + efectividad.'},
+        {m:2,q:'Una práctica alineada a principios es…',choices:['Ocultar un error menor','Reportar hallazgos y corregir','Eludir controles cuando urja'],a:1,exp:'Reportar y corregir materializa los principios.'}
+      ];
+      function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
+      function pickForModule(mod, n=2){ const arr = miniBank.filter(it=>it.m===mod); return shuffle(arr).slice(0, Math.min(n, arr.length)); }
+      window.__chacoModuleQuizStatus = window.__chacoModuleQuizStatus || {};
+      document.querySelectorAll('.quiz.mini[data-module]').forEach(container=>{
+        const mod = parseInt(container.dataset.module,10);
+        const KEY = 'chaco.modQuiz.'+mod;
+        function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch{ return {}; } }
+                 function save(s){ localStorage.setItem(KEY, JSON.stringify(s||{})); window.__chacoModuleQuizStatus[mod] = { attempts: (s.attempts||0), passed: !!s.passed }; try{ window.dispatchEvent(new CustomEvent('chaco:status-change')); }catch{} }
+        let state = load();
+        if(!state.attempts) state.attempts = 0;
+        if(!state.passed) state.passed = false;
+        window.__chacoModuleQuizStatus[mod] = { attempts: state.attempts, passed: state.passed };
+
+        container.innerHTML = ''
+          + '<div class="quiz-head"><span class="badge">Mini evaluación Módulo '+mod+'</span>'
+          + '<span class="badge" data-role="status"></span></div>'
+          + '<div class="q-card" data-role="body"><p class="muted">Responde para avanzar. Acierta todas para aprobar. Tenés 2 intentos.</p></div>'
+          + '<div class="q-actions">'
+          + '<button class="pill" data-action="start">Comenzar</button>'
+          + '<button class="pill" data-action="next" disabled>Siguiente</button>'
+          + '<button class="pill" data-action="retry" style="display:none">Reintentar</button>'
+          + '</div>'
+          + '<div class="result" data-role="result" style="display:none"></div>';
+
+        const elStatus = container.querySelector('[data-role="status"]');
+        const elBody = container.querySelector('[data-role="body"]');
+        const elResult = container.querySelector('[data-role="result"]');
+        const btnStart = container.querySelector('[data-action="start"]');
+        const btnNext = container.querySelector('[data-action="next"]');
+        const btnRetry = container.querySelector('[data-action="retry"]');
+
+        let questions = [], idx = 0, correct = 0, answered = false;
+
+        function updateStatus(){ elStatus.textContent = 'Intentos: ' + (state.attempts||0) + '/2 · Estado: ' + (state.passed? 'Aprobado':'Pendiente'); }
+
+        function renderQuestion(){
+          const q = questions[idx];
+          elBody.innerHTML = '';
+          const title = document.createElement('div'); title.className='q-title'; title.textContent = q.q;
+          const list = document.createElement('div'); list.className='choices';
+          q.choices.forEach((c,i)=>{
+            const opt = document.createElement('div'); opt.className='choice'; opt.setAttribute('role','button'); opt.setAttribute('tabindex','0'); opt.textContent = c;
+            opt.addEventListener('click', ()=>select(i));
+            opt.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); select(i); } });
+            list.appendChild(opt);
+          });
+          const explain = document.createElement('div'); explain.className='explain'; explain.id='explain-mini-'+mod;
+          elBody.appendChild(title); elBody.appendChild(list); elBody.appendChild(explain);
+          answered=false; btnNext.disabled=true; updateStatus();
+        }
+
+        function select(i){
+          if(answered) return; answered=true;
+          const q = questions[idx]; const choices = elBody.querySelectorAll('.choice');
+          choices.forEach((el,k)=>{ el.classList.add(k===q.a? 'correct':'incorrect'); el.style.cursor='default'; });
+          if(i===q.a) correct += 1;
+          const ex = elBody.querySelector('.explain'); if(ex) ex.textContent = q.exp;
+          btnNext.disabled = false; updateStatus();
+        }
+
+        function finish(){
+          const passed = correct === questions.length;
+          if(!state) state = {attempts:0, passed:false};
+          state.attempts = (state.attempts||0) + 1;
+          if(passed) state.passed = true;
+          save(state);
+          elBody.innerHTML = '<div class="q-title">Intento finalizado</div><p>Correctas: <strong>'+correct+'/'+questions.length+'</strong>.</p>';
+          elResult.style.display='block';
+          elResult.className = 'result ' + (passed? 'success':'fail');
+          elResult.innerHTML = passed ? '<strong>¡Aprobado!</strong> Podés continuar al siguiente módulo.' : ((state.attempts<2) ? '<strong>No aprobado.</strong> Te queda 1 intento.' : '<strong>No aprobado tras 2 intentos.</strong> Podés continuar al siguiente módulo.');
+          btnNext.disabled = true;
+          btnRetry.style.display = (!passed && state.attempts<2) ? 'inline-block' : 'none';
+          updateStatus();
+        }
+
+        function next(){ if(idx < questions.length - 1){ idx++; renderQuestion(); } else { finish(); } }
+
+        function start(){
+          if(state.passed){ elResult.style.display='block'; elResult.className='result success'; elResult.innerHTML='<strong>Ya aprobado.</strong> Podés continuar.'; return; }
+          if((state.attempts||0) >= 2){ elResult.style.display='block'; elResult.className='result fail'; elResult.innerHTML='<strong>Sin intentos disponibles.</strong> Podés continuar al siguiente módulo.'; return; }
+          questions = pickForModule(mod, 2); idx=0; correct=0; answered=false; elResult.style.display='none'; btnRetry.style.display='none'; renderQuestion();
+        }
+
+        btnStart.addEventListener('click', start);
+        btnNext.addEventListener('click', next);
+        btnRetry.addEventListener('click', start);
+
+        updateStatus();
+        save(state);
+      });
+
+      // Gating para el avance con el botón "Siguiente"
+      window.chacoCanAdvanceFromSlide = function(slideEl){
+        const mini = slideEl.querySelector('.quiz.mini[data-module]');
+        if(mini){
+          const mod = parseInt(mini.dataset.module,10);
+          const st = (window.__chacoModuleQuizStatus && window.__chacoModuleQuizStatus[mod]) || {attempts:0, passed:false};
+          if(!(st.passed || st.attempts >= 2)){
+            const res = mini.querySelector('[data-role="result"]');
+            if(res){ res.style.display='block'; res.className='result fail'; res.innerHTML='<strong>Para continuar:</strong> completá la mini evaluación. Tenés hasta 2 intentos.'; }
+            mini.scrollIntoView({ behavior:'smooth', block:'center' });
+            return false;
+          }
+        }
+        if(slideEl.id === 'quizSlide'){
+          const fm = window.__chacoFinalQuizMeta || {attempts:0, passed:false};
+          if(!(fm.passed || fm.attempts >= 2)){
+            const res = document.getElementById('quizResult');
+            if(res){ res.style.display='block'; res.className='result fail'; res.innerHTML='<strong>Para continuar:</strong> completá la evaluación (hasta 2 intentos).'; }
+            slideEl.querySelector('.slide-content')?.scrollIntoView({behavior:'smooth', block:'start'});
+            return false;
+          }
+        }
+        return true;
+      };
+         })();
+ 
+     // ======= Certificado descargable al aprobar todo =======
+     (function(){
+       const certBtn = document.getElementById('btnDownloadCert');
+       const certName = document.getElementById('certName');
+       const certStatus = document.getElementById('certStatus');
+       const certCard = document.getElementById('certCard');
+       if(!certCard) return;
+       function getModulesStatus(){
+         const st = window.__chacoModuleQuizStatus || {};
+         const mods = [1,2,3,4,5];
+         return mods.every(m => (st[m]?.passed) === true);
+       }
+       function getFinalStatus(){
+         const fm = window.__chacoFinalQuizMeta || {attempts:0, passed:false};
+         return !!fm.passed;
+       }
+       function refresh(){
+         const ok = getModulesStatus() && getFinalStatus();
+         certBtn.disabled = !ok || !(certName && certName.value && certName.value.trim().length > 2);
+         certStatus.textContent = ok ? '¡Listo! Ya aprobaste todo. Ingresá tu nombre y descargá tu diploma.' : 'Para habilitar el diploma, aprobá todas las mini-evaluaciones y la evaluación final.';
+       }
+       function toDataUrl(url){ return fetch(url).then(r=>r.blob()).then(b => new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(b); })); }
+       async function buildAndDownload(){
+         const name = (certName.value||'').trim(); if(!name) return;
+         const date = new Date().toLocaleDateString('es-AR', { year:'numeric', month:'long', day:'2-digit' });
+         const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="100%" stop-color="#2a5298"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <rect x="70" y="70" width="1260" height="860" rx="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.35)" filter="url(#s)"/>
+  <text x="700" y="200" text-anchor="middle" fill="#ffd93d" font-family="'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700">CHACOMER</text>
+  <text x="700" y="280" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700">Diploma de Finalización</text>
+  <text x="700" y="380" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="28" opacity="0.9">Se otorga el presente diploma a</text>
+  <text x="700" y="460" text-anchor="middle" fill="#4ecdc4" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800">${name.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</text>
+  <text x="700" y="520" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="24" opacity="0.9">por culminar exitosamente el curso</text>
+  <text x="700" y="560" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700">Estrategia Empresarial – Inducción Corporativa</text>
+  <text x="700" y="620" text-anchor="middle" fill="#ffd93d" font-family="'Segoe UI', Arial, sans-serif" font-size="20">Fecha: ${date}</text>
+  <g transform="translate(260,720)">
+    <rect x="0" y="0" width="350" height="2" fill="#ffd93d"/>
+    <text x="175" y="36" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="18">Dirección de Talento Humano</text>
+  </g>
+  <g transform="translate(790,720)">
+    <rect x="0" y="0" width="350" height="2" fill="#ffd93d"/>
+    <text x="175" y="36" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="18">Gerencia General</text>
+  </g>
+</svg>`;
+         const blob = new Blob([svg], {type:'image/svg+xml'});
+         const url = URL.createObjectURL(blob);
+         const a = document.createElement('a');
+         a.href = url;
+         a.download = 'Diploma_Chacomer_'+name.replace(/\s+/g,'_')+'.svg';
+         document.body.appendChild(a);
+         a.click();
+         setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 0);
+       }
+       certName?.addEventListener('input', refresh);
+       certBtn?.addEventListener('click', buildAndDownload);
+       window.addEventListener('chaco:status-change', refresh);
+       refresh();
+     })();
+ 
+     // ======= Ensayo: guardado e impresión =======
+     (function(){
       const ta = document.getElementById('essay'); if(!ta) return;
       const st = document.getElementById('essayStatus');
       const bS = document.getElementById('btnSaveEssay');
